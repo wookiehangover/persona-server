@@ -10,7 +10,7 @@ var http = require('http');
 var path = require('path');
 
 var corsMiddleware = require('cors')({
-  origin: 'http://localhost:8000',
+  origin: process.env.origin || 'http://localhost:8000',
   credentials: true,
   enablePreflight: true
 });
